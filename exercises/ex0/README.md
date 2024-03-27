@@ -45,7 +45,6 @@ Now that we know what the SAP Cloud Services are and we understood what the scop
 
 The SAP Cloud Identity Service tenant URL is specific for your seat in the workshop room.  
 
-Seat number in workshop: XY 
 URL: https://aruagcnbn.accounts.ondemand.com/admin    
 
 
