@@ -36,7 +36,7 @@ Para obter mais informações sobre esses serviços, explore nossa documentaçã
 ## Cenário prático
 Para entender melhor a funcionalidade de provisionamento disponível no SAP Cloud Identity Service, passaremos juntos pelos próximos exercícios. O cenário é escolhido de forma a assemelhar-se, ainda que em pequena escala, ao ciclo de vida da identidade numa paisagem. Começaremos conectando uma origem de usuário ao Provisionamento de Identidade. Para isso, utilizaremos um sistema SAP SuccessFactors. Posteriormente, configuraremos um sistema alvo - o Diretório de Identidades. Analisaremos os diferentes tipos de trabalho e aprenderemos como alterar as transformações IPS padrão e como validar seu comportamento.
 
-## Acessando o locatário do SAP Cloud Identity Services
+## Acessando o SAP Cloud Identity Services
 
 Agora que sabemos o que são os SAP Cloud Services e entendemos qual é o escopo desta sessão prática, vamos verificar o acesso ao sistema. Para esta sessão, você precisará de acesso a um locatário do SAP Cloud Identity Service (SCI) e a uma instância do SAP SuccessFactors.
 
