@@ -1,84 +1,83 @@
-# Exercise 4 - Identity Provisioning Operations
+# Exercício 4 - Operações de provisionamento de identidade
 
-In this exercise, you will learn about the various Operations available in the Identity Provisioing service. We will start by understanding what transformations are. 
+Neste exercício, você conhecerá as diversas operações disponíveis no serviço Identity Provisioning. Começaremos entendendo o que são transformações.
 
-**Transformations**
-For every system supported by the Identity Provisioning service, there is an initial (default) transformation logic that converts the system specific representation of the entities from/to one common JSON. This default transformation is visible on the Transformations tab when you create a new system, after saving it.
+**Transformações**
+Para cada sistema suportado pelo serviço Identity Provisioning, há uma lógica de transformação inicial (padrão) que converte a representação específica do sistema das entidades de/para um JSON comum. Essa transformação padrão fica visível na aba Transformações quando você cria um novo sistema, após salvá-lo.
 
-**Transformation Editors**
-The Identity Provisioning service provides two editors for working with the transformation code: graphical editor and JSON (code) editor. The graphical editor is displayed by default. You can switch between them on the Transformations tab as you will see in the next exercise. 
-Check the chapter [Transformations](https://help.sap.com/docs/identity-provisioning/identity-provisioning/transformations?locale=en-US) for more explanations and examples. 
+**Editores de Transformação**
+O serviço Identity Provisioning fornece dois editores para trabalhar com o código de transformação: editor gráfico e editor JSON (código). O editor gráfico é exibido por padrão. Você pode alternar entre eles na guia Transformações, como verá no próximo exercício.
+Consulte o capítulo [Transformações](https://help.sap.com/docs/identity-provisioning/identity-provisioning/transformations?locale=en-US) para mais explicações e exemplos.
 
-## Exercise 4.1 Meet the graphical editor
+## Exercício 4.1 Conheça o editor gráfico
 
-In the previous exercise, an error occurred in the last executed job. In this case, the reason was that the value for the department in the source system does not match one of the possible values in the target system. The scope of this exercise is to understand how to use the graphical editor, therefore you will perform a mapping between the possible values of the `department` attribute.  
+No exercício anterior, ocorreu um erro no último trabalho executado. Neste caso, o motivo foi que o valor do departamento no sistema de origem não corresponde a um dos valores possíveis no sistema de destino. O objetivo deste exercício é entender como utilizar o editor gráfico, portanto você realizará um mapeamento entre os possíveis valores do atributo `department`.
 
-1. From your SCI admin console navigate to the third tab **Identity Provisioning** and choose Target Systems. You want to perform the value mapping in the target system because these values are specific to the Identity Directory target system specific.
-In the **Local Identity Directory** target system that we created in Exercise 2, navigate to the second tab **Transformations**
+1. No console de administração do SCI, navegue até a terceira guia **Provisionamento de identidade** e escolha Sistemas de destino. Você deseja executar o mapeamento de valores no sistema de destino porque esses valores são específicos do sistema de destino do Identity Directory.
+No sistema de destino **Local Identity Directory** que criamos no Exercício 2, navegue até a segunda guia **Transformações**
 
 <img src="/exercises/ex4/images/41.png">
 
-2. Notice the buttons on the upper right corner of the editor tab. From here you can shift between the two editors. Press on the button **Edit** and follow the next steps
+2. Observe os botões no canto superior direito da aba do editor. A partir daqui você pode alternar entre os dois editores. Pressione o botão **Editar** e siga os próximos passos
 
 <img src="/exercises/ex4/images/42.png">
 
-3. The first entity is the **User**. Scroll down for the `department` attribute and press on the **Pencil** icon to edit the mapping
+3. A primeira entidade é o **Usuário**. Role para baixo até o atributo `departamento` e pressione o ícone **Lápis** para editar o mapeamento
 
 <img src="/exercises/ex4/images/43.png">
 
-4. On the lower part of the pop-up window, press on **Add** to add name-value pair for the specified expression
+4. Na parte inferior da janela pop-up, pressione **Adicionar** para adicionar o par nome-valor para a expressão especificada
 
 <img src="/exercises/ex4/images/44.png">
 
-5. Under Name choose **type**
+5. Em Nome, escolha **tipo**
 
 <img src="/exercises/ex4/images/45.png">
 
-6. Under Value choose **valueMapping** and then **Save**
+6. Em Valor, escolha **valueMapping** e depois **Salvar**
 
 <img src="/exercises/ex4/images/46.png">
 
-7. To **Add a value mapping** choose the fifth button from top to bottom as displayed bellow
+7. Para **Adicionar um mapeamento de valor** escolha o quinto botão de cima para baixo conforme exibido abaixo
    
 <img src="/exercises/ex4/images/47.png">
 
-8. Press on **Add** to insert the new values in step 9
+8. Pressione **Adicionar** para inserir os novos valores no passo 9
 
 <img src="/exercises/ex4/images/48.png">
 
-9. On the left column we will have the values from SAP SuccessFactors source system and on the right column the ones from the local Identity Directory. Please add the values as seen bellow and then press on **Save**
+9. Na coluna da esquerda teremos os valores do sistema de origem SAP SuccessFactors e na coluna da direita os do Identity Directory local. Adicione os valores conforme mostrado abaixo e pressione **Salvar**
  
 <img src="/exercises/ex4/images/49.png">
 
-10. You will see the changes also in the JSON editor. Simply shift the view and search for the rows 155 to 175
+10. Você verá as alterações também no editor JSON. Basta mudar a visualização e procurar as linhas 155 a 175
 
 <img src="/exercises/ex4/images/410.png">
 
-11. Please run the job again. Navigate to the source system and choose the **SAP SFSF** source system. Press on the last tab **Jobs** and choose **Run Now** for the **Read Job**
+11. Execute o trabalho novamente. Navegue até o sistema de origem e escolha o sistema de origem **SAP SFSF**. Pressione na última aba **Jobs** e escolha **Run Now** para **Read Job**
 
 <img src="/exercises/ex4/images/411.png">
 
-12. Navigate to the **Provisioning Logs** (from the Identity Provisioning drop-down menu) and notice how the job was now successful
+12. Navegue até **Logs de provisionamento** (no menu suspenso Provisionamento de identidade) e observe como o trabalho foi bem-sucedido.
     
 <img src="/exercises/ex4/images/412.png">
 
-13. Press on the job result and inspect what changed now
+13. Pressione o resultado do trabalho e inspecione o que mudou agora
 
 <img src="/exercises/ex4/images/413.png">
 
-14. Have a look at a user record. From the SCI admin console navigate to the second tab **User Management**
+14. Dê uma olhada no registro do usuário. No console de administração do SCI, navegue até a segunda guia **Gerenciamento de usuários**
 
 <img src="/exercises/ex4/images/414.png">
 
-15. You can search for the user "HR" because this was one of the users that had as `department` value `SMB` in SAP SFSF - and this caused an error previously. Choose this user and let us scroll to the `department` attribute
+15. Você pode procurar pelo usuário “HR” pois este era um dos usuários que tinha como valor `departamento` `SMB` no SAP SFSF - e isso causou um erro anteriormente. Escolha este usuário e vamos rolar até o atributo `departamento`
 
 <img src="/exercises/ex4/images/415.png">
 
-16. As expected, the change in the mapping transformation worked
+16. Como esperado, a mudança na transformação do mapeamento funcionou
 
 <img src="/exercises/ex4/images/416.png">
 
 
-## Summary 
-After completing these steps you learned what the transformations are and how they can be changed. You edited the value mapping for the attribute `department` and tested the results of our changes. Join us on the next exercise to learn more exciting IPS features [Exercise 5 - Advanced Identity Provisioning Operations](../ex5/README.md)
-
+## Resumo
+Depois de concluir essas etapas você aprendeu o que são as transformações e como elas podem ser alteradas. Você editou o mapeamento de valores do atributo `department` e testou os resultados de nossas alterações. Junte-se a nós no próximo exercício para aprender mais recursos interessantes do IPS [Exercício 5 – Operações avançadas de provisionamento de identidade](../ex5/README.md)
