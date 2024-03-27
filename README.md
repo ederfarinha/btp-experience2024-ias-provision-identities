@@ -3,48 +3,48 @@
 # XP265 - SAP Cloud Identity Services: How to Provision Identities 
 
 
-## Description
+## Descrição
 
-This repository contains the material for the SAP TechEd 2022 session XP265 - SAP Cloud Identity Services: How to Provision Identities.
+Este repositório contém o material para a sessão SAP TechEd 2022 XP265 - SAP Cloud Identity Services: Como provisionar identidades.
 
-## Overview
+## Visão geral
 
-Have you always wanted to know how to provision identities with SAP Cloud Identity Services but just didn't know where to start? The answer is simple: Get on the fast track in this hands-on session. Discover how to manage transformations with the Identity Provisioning service, and get a guided tour through the different provisioning job types.
+Você sempre quis saber como provisionar identidades com SAP Cloud Identity Services, mas não sabia por onde começar? A resposta é simples: acelere nesta sessão prática. Descubra como gerenciar transformações com o serviço Identity Provisioning e faça um tour guiado pelos diferentes tipos de trabalho de provisionamento.
 
 
-## Requirements
+## Requisitos
 
-None
+Nenhum
 
-## Exercises
+## Exercícios
 
-- [Getting Started](exercises/ex0/)
-    - [Hands-on scenario](exercises/ex0#Hands-on-scenario)
-    - [Accessing the SAP Cloud Identity Services tenant](exercises/ex0#Accessing-the-SAP-Cloud-Identity-Services-tenan)
-- [Exercise 1 - System types in the Identity Provisioning service ](exercises/ex1/)
-    - [Exercise 1.1 Creating a source system in IPS](exercises/ex1#Exercise-1.1-Creating-a-source-system-in-IPS)
-- [Exercise 2 - Adding a target system](exercises/ex2/)
-    - [Exercise 2.1 Defining the Identity Directory as a target systen](exercises/ex2#Exercise-2.1-Defining-the-Identity-Directory-as-a-target-systen)
-- [Exercise 3 - Identity Provisioning Job Types](exercises/ex3/)
-    - [Exercise 3.1 Job types](exercises/ex3#Exercise-3.1-Job-types)
-    - [Exercise 3.2 The Validate job](exercises/ex3#Exercise-3.2-The-Validate-job)
-    - [Exercise 3.3 The Run job](exercises/ex3#Exercise-3.3-The-Run-job)
-- [Exercise 4 - Identity Provisioning Operations](exercises/ex4/)
-    - [Exercise 4.1 Meet the graphical editor](exercises/ex4#Exercise-4.1-Meet-the-graphical-editor)
-- [Exercise 5 - Advanced Identity Provisioning Operations](exercises/ex5/)
-    - [Exercise 5.1 Editing Conditions](exercises/ex5#Exercise-5.1-Editing-Conditions)
-    - [Exercise 5.2 Meet the Simulate job](exercises/ex5#Exercise-5.2-Meet-the-Simulate-job)
-    - [Exercise 5.3 Working with Properties](exercises/ex5#Exercise-5.3-Working-with-Properties)
+- [Introdução](exercícios/ex0/)
+     - [Cenário prático](exercícios/ex0#Cenário prático)
+     - [Acessando o locatário do SAP Cloud Identity Services](exercícios/ex0#Accessing-the-SAP-Cloud-Identity-Services-tenan)
+- [Exercício 1 - Tipos de sistema no serviço Identity Provisioning ](exercícios/ex1/)
+     - [Exercício 1.1 Criando um sistema fonte em IPS](exercícios/ex1#Exercise-1.1-Creating-a-source-system-in-IPS)
+- [Exercício 2 - Adicionando um sistema alvo](exercícios/ex2/)
+     - [Exercício 2.1 Definindo o diretório de identidade como um sistema de destino](exercícios/ex2#Exercise-2.1-Defining-the-Identity-Directory-as-a-target-systen)
+- [Exercício 3 - Tipos de trabalho de provisionamento de identidade](exercícios/ex3/)
+     - [Tipos de trabalho do Exercício 3.1](exercícios/ex3#Exercício-3.1-Tipos de trabalho)
+     - [Exercício 3.2 O trabalho de validação](exercícios/ex3#Exercício-3.2-O-trabalho de validação)
+     - [Exercício 3.3 O trabalho de execução](exercícios/ex3#Exercício-3.3-O-trabalho de execução)
+- [Exercício 4 - Operações de provisionamento de identidade](exercícios/ex4/)
+     - [Exercício 4.1 Conheça o editor gráfico](exercícios/ex4#Exercício-4.1-Conheça-o-editor-gráfico)
+- [Exercício 5 - Operações avançadas de provisionamento de identidade](exercícios/ex5/)
+     - [Condições de edição do exercício 5.1](exercícios/ex5#Exercício-5.1-Condições de edição)
+     - [Exercício 5.2 Conheça o trabalho Simular](exercícios/ex5#Exercício-5.2-Conheça o trabalho Simular)
+     - [Exercício 5.3 Trabalhando com Propriedades](exercícios/ex5#Exercício-5.3-Trabalhando com Propriedades)
 
-## Contributing
-Please read the [CONTRIBUTING.md](./CONTRIBUTING.md) to understand the contribution guidelines.
+## Contribuindo
+Por favor, leia [CONTRIBUTING.md](./CONTRIBUTING.md) para entender as diretrizes de contribuição.
 
-## Code of Conduct
-Please read the [SAP Open Source Code of Conduct](https://github.com/SAP-samples/.github/blob/main/CODE_OF_CONDUCT.md).
+## Código de Conduta
+Leia o [Código de conduta de código aberto da SAP](https://github.com/SAP-samples/.github/blob/main/CODE_OF_CONDUCT.md).
 
-## How to obtain support
+## Como obter suporte
 
-Support for the content in this repository is available during the actual time of the online session for which this content has been designed. Otherwise, you may request support via the [Issues](../../issues) tab.
+O suporte para o conteúdo deste repositório está disponível durante a sessão online para a qual este conteúdo foi projetado. Caso contrário, você pode solicitar suporte através da aba [Issues](../../issues).
 
-## License
-Copyright (c) 2023 SAP SE or an SAP affiliate company. All rights reserved. This project is licensed under the Apache Software License, version 2.0 except as noted otherwise in the [LICENSE](LICENSES/Apache-2.0.txt) file.
+## Licença
+Copyright (c) 2023 SAP SE ou empresa afiliada da SAP. Todos os direitos reservados. Este projeto está licenciado sob a Licença de Software Apache, versão 2.0, exceto quando indicado de outra forma no arquivo [LICENSE](LICENSES/Apache-2.0.txt).
