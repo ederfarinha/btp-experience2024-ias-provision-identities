@@ -1,4 +1,4 @@
-# Getting started
+# Introdução
 
 Antes de iniciar os exercícios, vamos relembrar um pouco o que são os serviços SAP Cloud Identity.
 
