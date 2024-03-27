@@ -1,74 +1,74 @@
-# Exercise 1 - System types in the Identity Provisioning service 
+# Exercício 1 – Tipos de sistema no serviço Identity Provisioning
 
-In this exercise, we will learn about the different types of systems in Identity Provisioning and we will configure a source system. 
+Neste exercício, aprenderemos sobre os diferentes tipos de sistemas no Identity Provisioning e configuraremos um sistema de origem.
 
-The Identity Provisioning service ensures the synchronization of the entities between a source system and one or multiple target systems.
+O serviço Identity Provisioning garante a sincronização das entidades entre um sistema de origem e um ou vários sistemas de destino.
 
-**Source Systems** 
+**Sistemas Fonte**
 
-A source system is the connector used for reading entities (users, groups, roles). Source systems can be on-premise or cloud-based, SAP or non-SAP, and usually represent the corporate user store where identities are currently maintained. Identity Provisioning reads the entities from the source system and creates or updates them in the relevant target ones. The provisioning is triggered from the Jobs tab of a source system.
+Um sistema de origem é o conector usado para leitura de entidades (usuários, grupos, funções). Os sistemas de origem podem ser locais ou baseados em nuvem, SAP ou não SAP, e geralmente representam o armazenamento de usuários corporativos onde as identidades são mantidas atualmente. O Provisionamento de Identidade lê as entidades do sistema de origem e as cria ou atualiza nas entidades de destino relevantes. O provisionamento é acionado na guia Jobs de um sistema de origem.
 
-You can connect one source system to one or multiple target systems.
+Você pode conectar um sistema de origem a um ou vários sistemas de destino.
 
 <img src="/exercises/ex1/images/sourcesys.png" width=50% height=50% >
 
-**Target Systems** 
+*Sistemas Alvos**
 
-A target system is the connector used for writing (provisioning) entities. Target systems are usually cloud-based, where Identity Provisioning creates or updates the entities taken from the source system.
+Um sistema de destino é o conector usado para escrever (provisionar) entidades. Os sistemas de destino geralmente são baseados em nuvem, onde o Identity Provisioning cria ou atualiza as entidades retiradas do sistema de origem.
 
-A target system can be connected to a single or multiple source systems.
+Um sistema de destino pode ser conectado a um único ou a vários sistemas de origem.
 
-**Proxy Systems** 
+**Sistemas Proxy**
 
-A proxy system is a special connector used for "hybrid" scenarios. It exposes any Identity Provisioning supported backend system as a SCIM 2.0 service provider, which can be consumed by any SCIM 2.0 compatible client application, without making a direct connection between them.
+Um sistema proxy é um conector especial usado para cenários “híbridos”. Ele expõe qualquer sistema back-end compatível com Provisionamento de Identidade como um provedor de serviços SCIM 2.0, que pode ser consumido por qualquer aplicativo cliente compatível com SCIM 2.0, sem fazer uma conexão direta entre eles.
 
 <img src="/exercises/ex1/images/proxy.png" width=50% height=50% >
 
-You can find more information on this on our product page under [System Types](https://help.sap.com/docs/identity-provisioning/identity-provisioning/system-types?locale=en-US).
+Você pode encontrar mais informações sobre isso em nossa página de produto em [Tipos de sistema](https://help.sap.com/docs/identity-provisioning/identity-provisioning/system-types?locale=en-US).
 
-The Identity Provisioning service supports provisioning of users and groups between multiple cloud and on-premise systems, both SAP and non-SAP. The complete list can be found under [Supported Systems](https://help.sap.com/docs/identity-provisioning/identity-provisioning/supported-systems?locale=en-US)
+O serviço Identity Provisioning oferece suporte ao provisionamento de usuários e grupos entre vários sistemas na nuvem e locais, tanto SAP quanto não SAP. A lista completa pode ser encontrada em [Sistemas Suportados](https://help.sap.com/docs/identity-provisioning/identity-provisioning/supported-systems?locale=en-US)
 
 
-## Exercise 1.1 Creating a source system in IPS 
+## Exercício 1.1 Criando um sistema fonte em IPS
 
-1. Navigate to the Identity Provisioning menu in the administrative console: 
+1. Navegue até o menu Provisionamento de Identidade no console administrativo:
 
 <img src="/exercises/ex1/images/12.png">
 
-2. Choose **Source Systems** from the drop-down list
+2. Escolha **Sistemas Fonte** na lista suspensa
 
 <img src="/exercises/ex1/images/11.png">
  
-3. In order to add a new Source Systenm, please press on **+Add**
+3. Para adicionar um novo Sistema Fonte, pressione **+Adicionar**
 
 <img src="/exercises/ex1/images/13.png">
    
-4. Search for the **SAP SuccessFactors** connector **Type**
+4. Procure o conector **SAP SuccessFactors** **Tipo**
 
 <img src="/exercises/ex1/images/14.png">
    
-5. Choose a meaningful name and description, such as **SAP SFSF**  and **my source system** for your system. **Do not save yet the system.**
+5. Escolha um nome e uma descrição significativos, como **SAP SFSF** e **meu sistema de origem** para seu sistema. **Não salve ainda o sistema.**
 
 <img src="/exercises/ex1/images/15.png">
    
-6. Navigate to the third tab called **Properties**, press on the button **Add** and choose **Standard**
+6. Navegue até a terceira aba chamada **Propriedades**, pressione o botão **Adicionar** e escolha **Padrão**
 
 <img src="/exercises/ex1/images/16.png">
 
-7. For **Name** choose _sf.api.version_ and for **Value** write  _2_
+7. Para **Nome** escolha _sf.api.version_ e para **Valor** escreva _2_
 
 <img src="/exercises/ex1/images/17.png">
      
-8.  When you are done press **Save**
+8. Quando terminar, pressione **Salvar**
 
- <img src="/exercises/ex1/images/18.png">
+  <img src="/exercises/ex1/images/18.png">
 
-9. Your saved system should look like this:
+9. Seu sistema salvo deve ficar assim:
     
 <img src="/exercises/ex1/images/19.png">
 
-10. After you have created the source system, continue adding the rest of the necessary properties: 
-The following properties are of type **Standard**
+10. Depois de criar o sistema de origem, continue adicionando o restante das propriedades necessárias:
+As propriedades a seguir são do tipo **Padrão**
 
 | Name         |Value | 
 |--------------|:-----:|
@@ -83,23 +83,22 @@ The following property is of type **Credential**
 |--------------|:-----:|
 |Password | **Ask your supervisor**|   
 
-11. Modify the following property
+11. Modifique a seguinte propriedade
 
 | Name         |Value | 
 |--------------|:-----:|
 |ips.trace.failed.entity.content |true|  
 
-If a provisioning job repeatedly fails and you need problem investigation, you can enable logging and tracing for the personal and sensitive data of your provisioned entities.
-To do this, set this property to true. If the property is not set, in the logs you see: content = hidden content.
+Se um trabalho de provisionamento falhar repetidamente e você precisar de investigação do problema, poderá ativar o registro em log e o rastreamento dos dados pessoais e confidenciais de suas entidades provisionadas.
+Para fazer isso, defina esta propriedade como verdadeira. Se a propriedade não estiver definida, nos logs você verá: conteúdo = conteúdo oculto.
 
-12. Check that your properties are similar to the bellow screenshot and press  **Save**.
+12. Verifique se suas propriedades são semelhantes à captura de tela abaixo e pressione **Salvar**.
 
 <img src="/exercises/ex1/images/111.png">
 
 
-## Summary
+## Resumo
 
-You've now created a source system for your SAP SuccessFactors instance. 
+Agora você criou um sistema de origem para sua instância do SAP SuccessFactors.
 
-Continue to [Exercise 2 - Adding a target system](../ex2/README.md) to create a target system. 
-
+Continue para o [Exercício 2 - Adicionando um sistema de destino](../ex2/README.md) para criar um sistema de destino.
