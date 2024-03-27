@@ -1,58 +1,57 @@
 # Getting started
 
-Before starting with the exercises, let us have a short reminder of what the SAP Cloud Identity Services are. 
-
+Antes de iniciar os exercícios, vamos relembrar um pouco o que são os serviços SAP Cloud Identity.
 
    
 <img align="right" width="650" src="/exercises/ex0/images/SCI.png" />
 
-SAP Cloud Identity Services (SCI) are the default to authenticate and provision users in cloud solutions from SAP:
-* Identity authentication (IAS)
-* Identity provisioning (IPS)
-* Authorization management (AMS)
-* Integrated through the common Identity Directory (IdDS)
+O SAP Cloud Identity Services (SCI) é a ferramenta padrão para autenticar e provisionar usuários em soluções em nuvem da SAP:
+* Autenticação de identidade (IAS)
+* Provisionamento de identidade (IPS)
+* Gerenciamento de autorização (AMS)
+* Integrado através do diretório de identidade comum (IdDS)
 
-The number of **pre-integrated SAP solutions** that require **SAP Cloud Identity Services** will increase.
-There is no need to separately license the usage of our services, when used with SAP cloud solutions. 
-**By default**, we offer **two SCI tenants**: 
-* Test tenant
-* Production tenant
+O número de **soluções SAP pré-integradas** que exigem **SAP Cloud Identity Services** aumentará.
+Não há necessidade de licenciar separadamente o uso de nossos serviços, quando usados com soluções em nuvem SAP.
+**Por padrão**, oferecemos **dois locatários SCI**:
+* Teste
+* Produção
 
-**What is Identity authentication?**
-The Identity Authentication service provides you with controlled cloud-based access to business processes, applications, and data. It simplifies your user experience through authentication mechanisms, single sign-on, on-premise integration, and convenient self-service options.
+**O que é autenticação de identidade?**
+O serviço de autenticação de identidade fornece acesso controlado baseado em nuvem a processos de negócios, aplicativos e dados. Ele simplifica a experiência do usuário por meio de mecanismos de autenticação, logon único, integração local e opções convenientes de autoatendimento.
 
-**What is Identity Provisioning?**
-The Identity Provisioning service automates identity lifecycle processes. It helps you provision identities and their authorizations to various cloud and on-premise business applications.
+**O que é provisionamento de identidade?**
+O serviço Identity Provisioning automatiza os processos do ciclo de vida da identidade. Ele ajuda você a provisionar identidades e suas autorizações para vários aplicativos de negócios locais e na nuvem.
 
-**What is Authorization Management?** 
-Authorization management provides a central management of end-user authorizations for business applications based on SAP BTP Technology Platform. AMS is based on the existing Identity Directory of SAP Cloud Identity Services and enables customers to manage assignments of policies to users based on the Identity Directory SCIM API.
+**O que é gerenciamento de autorização?**
+O gerenciamento de autorizações fornece um gerenciamento centralizado de autorizações de usuários finais para aplicativos de negócios baseados na plataforma tecnológica SAP BTP. O AMS é baseado no Identity Directory existente do SAP Cloud Identity Services e permite que os clientes gerenciem atribuições de políticas a usuários com base na API SCIM do Identity Directory.
 
-**What is the Identity Directory?**
-Identity Directory is the central component for persisting users and groups inside the SAP Cloud Identity Services.
-The usage of the Identity Directory simplifies how customers are connecting to our SAP SaaS applications, by using it as a central point of truth for the SAP cloud environment. 
-Additionally to the SAP Cloud Identity Services admin console UI, a SCIM 2.0 API allows you to programmatically access the identities inside the directory.
+**O que é o Diretório de Identidade?**
+O Identity Directory é o componente central para usuários e grupos persistentes dentro dos SAP Cloud Identity Services.
+O uso do Identity Directory simplifica a forma como os clientes se conectam aos nossos aplicativos SAP SaaS, usando-o como um ponto central de verdade para o ambiente de nuvem SAP.
+Além da IU do console administrativo do SAP Cloud Identity Services, uma API SCIM 2.0 permite acessar programaticamente as identidades dentro do diretório.
 
-For more information around these services, feel free to explore our [SAP Cloud Identity Services](https://help.sap.com/docs/cloud-identity) documentation as well as our [API collection](https://api.sap.com/package/SCPIdentityServices/rest) published on the SAP API Business Accelerator hub . All the services can be visually interacted with from the SAP Cloud Identity Services admin console.   
+Para obter mais informações sobre esses serviços, explore nossa documentação [SAP Cloud Identity Services](https://help.sap.com/docs/cloud-identity), bem como nossa [coleção de API](https://api.sap.com/package/SCPIdentityServices/rest) publicado no hub SAP API Business Accelerator . Todos os serviços podem interagir visualmente a partir do console de administração do SAP Cloud Identity Services.
 
-## Hands-on scenario
-To better understand the provisioning functionality available in the SAP Cloud Identity Service, we will go together through the next exercises. The scenario is chosen in such a way that it resembles albeit at small scale the identity lifecycle in a landscape. We will start by connecting a user source to the Identity Provisioning. For this, we will use a SAP SuccessFactors Systems. Afterwards, we will configure a target system - the Identity Directory. We will go through the different job types and learn how to change the default IPS transformations and how to validate their behavior.
+## Cenário prático
+Para entender melhor a funcionalidade de provisionamento disponível no SAP Cloud Identity Service, passaremos juntos pelos próximos exercícios. O cenário é escolhido de forma a assemelhar-se, ainda que em pequena escala, ao ciclo de vida da identidade numa paisagem. Começaremos conectando uma origem de usuário ao Provisionamento de Identidade. Para isso, utilizaremos um sistema SAP SuccessFactors. Posteriormente, configuraremos um sistema alvo - o Diretório de Identidades. Analisaremos os diferentes tipos de trabalho e aprenderemos como alterar as transformações IPS padrão e como validar seu comportamento.
 
-## Accessing the SAP Cloud Identity Services tenant
+## Acessando o locatário do SAP Cloud Identity Services
 
-Now that we know what the SAP Cloud Services are and we understood what the scope of this hands-on session is, let us check the system access. For this session you will need access to a SAP Cloud Identity Service (SCI) tenant and a SAP SuccessFactors instance. 
+Agora que sabemos o que são os SAP Cloud Services e entendemos qual é o escopo desta sessão prática, vamos verificar o acesso ao sistema. Para esta sessão, você precisará de acesso a um locatário do SAP Cloud Identity Service (SCI) e a uma instância do SAP SuccessFactors.
 
-1. Search for the internet browser on your computer and navigate to your SCI administrative console.
-
-The SAP Cloud Identity Service tenant URL is specific for your seat in the workshop room.  
+1. Procure o navegador da Internet em seu computador e navegue até o console administrativo do SCI.  
 
 URL: https://aruagcnbn.accounts.ondemand.com/admin    
 
 
-2. Type the username and password and press **Log On**
+<i>Usuário e senha serão fornecidos na sala do evento!</i>
+
+2. Digite o nome de usuário e a senha e pressione **Log On**
 
    <img src="/exercises/ex0/images/02.png" width=50% height=50%>
 
-3. You have access to the SAP Cloud Identity Services administrative console.
+3. Você tem acesso ao console administrativo do SAP Cloud Identity Services.
    
    <img src="/exercises/ex0/images/01.png" width=50% height=50%>
    
@@ -63,4 +62,4 @@ URL: https://aruagcnbn.accounts.ondemand.com/admin
 
 ## Summary
 
-Now that you have logged in your SCI console, continue to - [Exercise 1 - Exercise 1 Description](../ex1/README.md)
+Agora que você efetuou login em seu console SCI, continue para - [Exercise 1 - Exercise 1 Description](../ex1/README.md)
