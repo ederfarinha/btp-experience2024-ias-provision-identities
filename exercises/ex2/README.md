@@ -1,38 +1,38 @@
-# Exercise 2 - Adding a target system
+# Exercício 2 – Adicionando um sistema de destino
 
-In this exercise, you will create a target system for the source system created at the previous Exercise. 
+Neste exercício, você criará um sistema de destino para o sistema de origem criado no exercício anterior.
 
-## Exercise 2.1 Defining the Identity Directory as a target system
+## Exercício 2.1 Definindo o Diretório de Identidades como um sistema de destino
 
-As we have learned in the [Getting started](../ex0/README.md) chapter, each SAP SCI tenant includes an Identity Directory  (IdDS) that stores user, groups and group assignments. In this exercise you will configure IdDS as a provisioning target.  
+Como aprendemos no capítulo [Introdução](../ex0/README.md), cada locatário do SAP SCI inclui um diretório de identidade (IdDS) que armazena usuários, grupos e atribuições de grupo. Neste exercício você configurará o IdDS como alvo de provisionamento.
 
-1. Navigate to the SCI administrative console that corresponds to your seat. From the third tab **Identity Provisioning** please choose **Target Systems**
+1. Navegue até o console administrativo do SCI que corresponde ao seu assento. Na terceira guia **Provisionamento de identidade** escolha **Sistemas de destino**
 
-<img src="/exercises/ex2/images/21.png" width=50% height=50%>
+<img src="/exercises/ex2/images/21.png" largura=50% altura=50%>
 
-2. In order to add a new Target System, please press on **+Add**
+2. Para adicionar um novo sistema de destino, pressione **+Adicionar**
 
-<img src="/exercises/ex2/images/22.png" width=50% height=50%>
+<img src="/exercises/ex2/images/22.png" largura=50% altura=50%>
    
-3. Search for the **Local Identity Directory** connector **Type**
+3. Procure o conector **Diretório de Identidade Local** **Tipo**
 
-<img src="/exercises/ex2/images/23.png" width=50% height=50%>  
+<img src="/exercises/ex2/images/23.png" largura=50% altura=50%>
 
-4. Choose a meaningful name and description, such as **Local Identity Directory**  and **my local identity directory** for your system. Please be informed that the System Name cannot be changed once the system is saved
+4. Escolha um nome e uma descrição significativos, como **Diretório de identidade local** e **meu diretório de identidade local** para seu sistema. Informamos que o nome do sistema não pode ser alterado depois que o sistema for salvo
    
-5. Under **Source Systems** you need to choose the source system that was created in the previous exercise
+5. Em **Sistemas Fonte** você precisa escolher o sistema fonte que foi criado no exercício anterior
 
-<img src="/exercises/ex2/images/25.png" width=50% height=50%>  
+<img src="/exercises/ex2/images/25.png" largura=50% altura=50%>
 
-6. **Save** your system. Now your target system is created and it should look like this: 
+6. **Salve** seu sistema. Agora seu sistema de destino foi criado e deve ficar assim:
 
-<img src="/exercises/ex2/images/24.png" width=50% height=50%>
+<img src="/exercises/ex2/images/24.png" largura=50% altura=50%>
 
-As the users and groups will be provisioned to the identity directory of your current SAP Cloud Identity Services tenant, you don't have to set up connectivity and authentication properties for the target system.
+Como os usuários e grupos serão provisionados no diretório de identidade do seu locatário atual do SAP Cloud Identity Services, você não precisa configurar propriedades de conectividade e autenticação para o sistema de destino.
 
 
-## Summary
+## Resumo
 
-You've now defined the IdDs of your SCI tenant as a provisioning target system for your scenario. 
+Agora você definiu os IdDs do seu locatário SCI como um sistema de provisionamento de destino para o seu cenário.
 
-Continue to - [Exercise 3 - Identity Provisioning Job Types](../ex3/README.md)
+Continue para - [Exercício 3 - Tipos de trabalho de provisionamento de identidade](../ex3/README.md)
